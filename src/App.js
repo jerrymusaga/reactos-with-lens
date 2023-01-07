@@ -75,7 +75,8 @@ function App() {
     return "/default-avatar.png";
   };
 
-  
+
+
 
   return (
     <div className="app">
