@@ -75,6 +75,8 @@ function App() {
     return "/default-avatar.png";
   };
 
+  
+
   return (
     <div className="app">
       {/* NAVBAR */}
@@ -125,7 +127,7 @@ function App() {
       >
         {/* POSTS */}
         <Box width="65%" maxWidth="65%" minWidth="65%">
-        <Feed posts={posts} follow={follow} parseImageUrl={parseImageUrl} />
+        <Feed posts={posts} follow={follow} parseImageUrl={parseImageUrl} connectWallet={connectWallet} />
         </Box>
 
         {/* FRIEND SUGGESTIONS */}

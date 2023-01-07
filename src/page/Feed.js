@@ -1,10 +1,15 @@
 import React from "react";
 import { Card, CardHeader, CardBody, CardFooter} from '@chakra-ui/card';
 import { Avatar, Flex, Box, Heading, Text,IconButton,Image,Button } from '@chakra-ui/react'
-// import {BsThreeDotsVertical,BiLike,BiChat,BiShare } from "chakra-ui/icons"
+import {
+  Alert,
+  AlertTitle,
+  AlertIcon,
+  AlertDescription,
+} from "@chakra-ui/alert";
 
 
-const Feed = ({posts,follow,parseImageUrl}) => {
+const Feed = ({posts,follow,parseImageUrl, connectWallet}) => {
     console.log(posts)
     return (
         <>
@@ -36,7 +41,6 @@ const Feed = ({posts,follow,parseImageUrl}) => {
                         variant='ghost'
                         colorScheme='gray'
                         aria-label='See menu'
-                        // icon={<BsThreeDotsVertical />}
                     />
                     <Image
                         alt="follow-icon"
@@ -55,7 +59,7 @@ const Feed = ({posts,follow,parseImageUrl}) => {
                 </CardBody>
                 <Image
                     objectFit='cover'
-                    src='https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+                    src={parseImageUrl(post.metadata?.media)}
                     alt='Chakra UI'
                 />
 
