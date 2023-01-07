@@ -8,6 +8,10 @@ import {
 import LENSHUB from "./lenshub";
 import { ethers } from "ethers";
 import { Box, Button, Image } from "@chakra-ui/react";
+import Landing from "./page/Landing";
+import Feed from "./page/Feed";
+import { Routes, Route } from 'react-router-dom';
+
 
 function App() {
   const [account, setAccount] = useState(null);
@@ -109,6 +113,7 @@ function App() {
           )}
         </Box>
       </Box>
+      
 
       {/* CONTENT */}
       <Box
@@ -120,52 +125,7 @@ function App() {
       >
         {/* POSTS */}
         <Box width="65%" maxWidth="65%" minWidth="65%">
-          {posts.map((post) => (
-            <Box
-              key={post.id}
-              marginBottom="25px"
-              backgroundColor="rgba(5, 32, 64, 28)"
-              padding="40px 30px 40px 25px"
-              borderRadius="6px"
-            >
-              <Box display="flex">
-                {/* PROFILE IMAGE */}
-                <Box width="75px" height="75px" marginTop="8px">
-                  <img
-                    alt="profile"
-                    src={parseImageUrl(post.profile)}
-                    width="75px"
-                    height="75px"
-                    onError={({ currentTarget }) => {
-                      currentTarget.onerror = null; // prevents looping
-                      currentTarget.src = "/default-avatar.png";
-                    }}
-                  />
-                </Box>
-
-                {/* POST CONTENT */}
-                <Box flexGrow={1} marginLeft="20px">
-                  <Box display="flex" justifyContent="space-between">
-                    <Box fontFamily="DM Serif Display" fontSize="24px">
-                      {post.profile?.handle}
-                    </Box>
-                    <Box height="50px" _hover={{ cursor: "pointer" }}>
-                      <Image
-                        alt="follow-icon"
-                        src="/follow-icon.png"
-                        width="50px"
-                        height="50px"
-                        onClick={() => follow(post.id)}
-                      />
-                    </Box>
-                  </Box>
-                  <Box overflowWrap="anywhere" fontSize="14px">
-                    {post.metadata?.content}
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
-          ))}
+        <Feed posts={posts} follow={follow} parseImageUrl={parseImageUrl} />
         </Box>
 
         {/* FRIEND SUGGESTIONS */}

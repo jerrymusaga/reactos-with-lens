@@ -8,13 +8,13 @@ body {
   font-family: "Quattrocento Sans", sans-serif;
 }
 
-img {
+.img-profile {
   max-width: none !important;
   border-radius: 50%;
 }
 
 .app {
-  background: url("./gradient-background.png") no-repeat center center fixed;
+  /* background: url("./gradient-background.png") no-repeat center center fixed; */
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
