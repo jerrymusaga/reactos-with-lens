@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Stack, Image,Button, CardBody, CardFooter } from '@chakra-ui/react';
+import { Card, Stack,Heading, Text, Image,Button, CardBody, CardFooter } from '@chakra-ui/react';
 
 
 const ProfilePage = () => {

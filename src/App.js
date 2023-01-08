@@ -6,12 +6,14 @@ import {
   queryExplorePublications,
   queryGetProfile
 } from "./queries";
+import { useQuery } from "urql";
 import LENSHUB from "./lenshub";
 import { ethers } from "ethers";
 import { Box, Button, Image } from "@chakra-ui/react";
 import Landing from "./page/Landing";
 import Feed from "./page/Feed";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useRoutes } from 'react-router-dom';
+import ProfilePage from "./page/ProfilePage";
 
 
 function App() {
@@ -26,8 +28,14 @@ function App() {
     setAccount(accounts[0]);
   }
 
-  async function getProfile(){
-    
+  async function getProfile(id){
+    // const {loading,error,data} = useQuery(queryGetProfile, {
+    //   variables: {request: {profileId: id}},
+    // })
+
+    // if (loading) return "Loading..";
+    // if (error) return `Error! ${error.message}`;
+
   }
 
   async function getRecommendedProfiles() {

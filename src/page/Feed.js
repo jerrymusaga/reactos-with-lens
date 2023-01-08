@@ -7,6 +7,7 @@ import {
   AlertIcon,
   AlertDescription,
 } from "@chakra-ui/alert";
+import { Link } from "react-router-dom";
 
 
 const Feed = ({posts,follow,parseImageUrl, connectWallet}) => {
@@ -33,7 +34,10 @@ const Feed = ({posts,follow,parseImageUrl, connectWallet}) => {
                         />
 
                         <Box>
-                        <Heading size='sm'>{post.profile?.handle}</Heading>
+                        <Heading size='sm'>
+                            <Link to={post.profile?.handle}>{post.profile?.handle}</Link>
+                            
+                        </Heading>
                         <Text>{post.profile.name}</Text>
                         </Box>
                     </Flex>
@@ -59,7 +63,7 @@ const Feed = ({posts,follow,parseImageUrl, connectWallet}) => {
                 </CardBody>
                 <Image
                     objectFit='cover'
-                    src={parseImageUrl(post.metadata?.media)}
+                    src={parseImageUrl(post.profile.picture)}
                     alt='Chakra UI'
                 />
 
