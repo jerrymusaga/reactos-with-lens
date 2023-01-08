@@ -4,6 +4,7 @@ import {
   LENS_HUB_CONTRACT_ADDRESS,
   queryRecommendedProfiles,
   queryExplorePublications,
+  queryGetProfile
 } from "./queries";
 import LENSHUB from "./lenshub";
 import { ethers } from "ethers";
@@ -23,6 +24,10 @@ function App() {
       method: "eth_requestAccounts",
     });
     setAccount(accounts[0]);
+  }
+
+  async function getProfile(){
+    
   }
 
   async function getRecommendedProfiles() {

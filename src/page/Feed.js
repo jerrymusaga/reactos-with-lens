@@ -10,7 +10,7 @@ import {
 
 
 const Feed = ({posts,follow,parseImageUrl, connectWallet}) => {
-    console.log(posts)
+    
     return (
         <>
         {
