@@ -2,7 +2,8 @@ import React from 'react';
 import { Card, Stack,Heading, Text, Image,Button, CardBody, CardFooter } from '@chakra-ui/react';
 
 
-const ProfilePage = () => {
+const ProfilePage = ({data}) => {
+    console.log(data)
     return (
         <Card
   direction={{ base: 'column', sm: 'row' }}

@@ -18,7 +18,7 @@ const ProfileHandle = () => {
   if (error) return `Error! ${error.message}`;
 
   console.log("on profile page data: ", data);
-    return <ProfilePage />
+    return <ProfilePage data={data} />
 }
 
 export default ProfileHandle;

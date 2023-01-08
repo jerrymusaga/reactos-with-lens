@@ -35,7 +35,7 @@ const Feed = ({posts,follow,parseImageUrl, connectWallet}) => {
 
                         <Box>
                         <Heading size='sm'>
-                            <Link to={post.profile?.handle}>{post.profile?.handle}</Link>
+                            <Link to={`profile/${post.profile?.handle}`}>{post.profile?.handle}</Link>
                             
                         </Heading>
                         <Text>{post.profile.name}</Text>
