@@ -51,6 +51,7 @@ const Feed = ({posts,follow,parseImageUrl, connectWallet}) => {
                         src="/follow-icon.png"
                         width="50px"
                         height="50px"
+                        backgroundColor="rgba(5, 32, 64, 28)"
                         _hover={{ cursor: "pointer" }}
                         onClick={() => follow(post.id)}
                       />
@@ -63,7 +64,7 @@ const Feed = ({posts,follow,parseImageUrl, connectWallet}) => {
                 </CardBody>
                 <Image
                     objectFit='cover'
-                    src={parseImageUrl(post.profile.picture)}
+                    src={parseImageUrl(post.profile)}
                     alt='Chakra UI'
                 />
 

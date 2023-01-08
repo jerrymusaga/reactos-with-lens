@@ -42,7 +42,7 @@ function App() {
     const response = await urlClient
       .query(queryRecommendedProfiles)
       .toPromise();
-    const profiles = response.data.recommendedProfiles.slice(0, 5);
+    const profiles = response.data.recommendedProfiles.slice(0, 10);
     setProfiles(profiles);
   }
 
@@ -152,7 +152,7 @@ function App() {
           borderRadius="6px"
           height="fit-content"
         >
-          <Box fontFamily="DM Serif Display">FRIEND SUGGESTIONS</Box>
+          <Box fontFamily="DM Serif Display">Recommended Profiles</Box>
           <Box>
             {profiles.map((profile, i) => (
               <Box
