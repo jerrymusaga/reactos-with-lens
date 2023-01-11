@@ -10,8 +10,6 @@
     "@chakra-ui/react": "^2.4.6",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@pushprotocol/restapi": "^0.2.2",
-    "@pushprotocol/uiweb": "^0.2.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -22,7 +20,6 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
     "urql": "^3.0.3",
     "wagmi": "^0.10.5",
     "web-vitals": "^2.1.4"
